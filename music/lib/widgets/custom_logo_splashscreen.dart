@@ -15,10 +15,11 @@ class CustomLogoSplashScreen extends StatelessWidget {
       width: double.infinity,
       height: double.infinity,
       decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment(.20, -.98),
-              end: Alignment(-0.2, .98),
-              colors: [kPrimaryColor, kScreenPrimaryColor])),
+        gradient: LinearGradient(
+            begin: Alignment(.20, -.98),
+            end: Alignment(-0.2, .98),
+            colors: [kPrimaryColor, kScreenPrimaryColor]),
+      ),
       child: const Center(
         child: Image(
           image: AssetImage('Assets/images/music-notes.png'),
