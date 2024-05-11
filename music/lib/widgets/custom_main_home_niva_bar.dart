@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music/controller/home_controller.dart';
+import 'package:music/controller/main_home_controller.dart';
 
 class CustomNivaBar extends StatelessWidget {
   const CustomNivaBar({required this.onTap, required this.index});
@@ -17,9 +17,9 @@ class CustomNivaBar extends StatelessWidget {
         backgroundColor: Color(0xff261F44),
         type: BottomNavigationBarType.fixed,
         items: [
-          for (int i = 0; i < HomeController.homeIcon.length; i++)
+          for (int i = 0; i < MainHomeController.homeIcon.length; i++)
             BottomNavigationBarItem(
-                icon: HomeController.homeIcon[i], label: ''),
+                icon: MainHomeController.homeIcon[i], label: ''),
         ]);
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music/screens/home_screen.dart';
+import 'package:music/screens/main_home_screen.dart';
 import 'package:music/screens/on_borarding_screen.dart';
 import 'package:music/screens/splash_screen.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashScreen.id: (context) => SplashScreen(),
         OnBoardingScreen.id: (context) => OnBoardingScreen(),
-        HomeScreen.id: (context) => HomeScreen()
+        MainHomeScreen.id: (context) => MainHomeScreen()
       },
     );
   }

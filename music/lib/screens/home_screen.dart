@@ -1,29 +1,36 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:music/controller/home_controller.dart';
-import 'package:music/widgets/custom_niva_bar.dart';
+import 'package:music/widgets/custom_text_field_home_screen.dart';
+import 'package:music/widgets/custom_text_home_screen.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  static String id = 'HomeScreen';
-
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  int index = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: HomeController.homePages[index],
-      bottomNavigationBar: CustomNivaBar(
-        index: index,
-        onTap: (int value) {
-          index = value;
-          setState(() {});
-        },
+    return SafeArea(
+      child: Container(
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment(.20, -.98),
+                end: Alignment(-.2, .98),
+                colors: [Color(0xff411F5C), Color(0xff261F5C)])),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Padding(
+              padding: EdgeInsets.only(top: 55, left: 33, right: 33),
+              child: CustomTextFieldHomeScreen(),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(left: 58, top: 32, right: 58),
+              child: TextHomeScreen(),
+            ),
+            ClipRRect(
+              child: Image(image: AssetImage('Assets/images/Mask group.png')),
+              borderRadius: BorderRadius.circular(10),
+            )
+          ],
+        ),
       ),
     );
   }

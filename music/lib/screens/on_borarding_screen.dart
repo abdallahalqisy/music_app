@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:music/screens/home_screen.dart';
+import 'package:music/screens/main_home_screen.dart';
 import 'package:music/widgets/constant.dart';
 import 'package:music/widgets/custom_button.dart';
 import 'package:music/widgets/custom_image_boarding_page.dart';
@@ -42,7 +42,7 @@ class OnBoardingScreen extends StatelessWidget {
                 CustomButton(
                   text: 'Get Started',
                   onPressed: () {
-                    Navigator.pushNamed(context, HomeScreen.id);
+                    Navigator.pushNamed(context, MainHomeScreen.id);
                   },
                 ),
                 CustomImageBoardingPage(),
