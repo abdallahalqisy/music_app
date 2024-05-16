@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music/screens/play_music_screen.dart';
 
 class CustomCardSongs extends StatelessWidget {
   // ignore: non_constant_identifier_names
@@ -23,7 +24,7 @@ class CustomCardSongs extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) => GestureDetector(
                   onTap: () {
-                    print('hello');
+                    Navigator.pushReplacementNamed(context, PlayMusicScreen.id);
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
